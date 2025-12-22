@@ -1,33 +1,45 @@
-# Backend para Opiniones de Cámara
+# **BACKEND_CAMERA_REVIEW** 📸
 
-Este proyecto es un backend desarrollado en .NET para un sistema de reseñas de cámaras fotográficas. Permite a editores publicar reseñas y a usuarios leer el contenido de las mismas.
+Este sistema es un ecosistema de microservicios robusto desarrollado en **.NET 8** enfocado en la gestión, publicación y consumo de reseñas técnicas de cámaras fotográficas. Utiliza una arquitectura orientada a eventos para desacoplar la publicación de contenidos.
 
-## Arquitectura
+---
 
-El sistema está diseñado con una arquitectura de microservicios:
+## **🏗️ Arquitectura del Sistema**
 
-- **AuthenticationService**: Servicio de autenticación independiente para editores, utilizando JWT y SQLite.
-- **CameraReview**: Biblioteca de clases con modelos de dominio (productos, cámaras, lentes, reseñas).
-- **ReviewPublisherFunctionApp**: Función de Azure para publicar reseñas vía Service Bus.
-- **CameraReviewContentProviderService**: Servicio placeholder para entrega de contenido.
-- **CameraReviewUnitTests**: Pruebas unitarias con MSTest y NSubstitute.
+El proyecto se divide en componentes especializados para garantizar escalabilidad:
 
-## Tecnologías
+* **`AuthenticationService`**: Microservicio encargado de la seguridad mediante **JWT** y almacenamiento en **SQLite**.
+* **`CameraReview`**: El "Core" del sistema. Biblioteca de clases que contiene los modelos de dominio (Cámaras, Lentes, Productos).
+* **`ReviewPublisherFunctionApp`**: *Serverless Logic*. Una Azure Function que procesa la publicación de reseñas de forma asíncrona mediante **Azure Service Bus**.
+* **`CameraReviewUnitTests`**: Suite de pruebas de alta fidelidad utilizando **MSTest** y **NSubstitute** para el mockeo de dependencias.
 
-- .NET 8.0 / .NET Core 3.1
-- ASP.NET Core
-- Entity Framework Core
-- JWT Bearer Authentication
-- Azure Functions
-- Service Bus
-- SQLite
+---
 
-## Instalación
+## **🛠️ Stack Tecnológico**
 
-1. Clona el repositorio:
-   ```
+| Capa | Tecnología |
+| :--- | :--- |
+| **Lenguaje** | C# 12 / .NET 8.0 |
+| **Framework Web** | ASP.NET Core Web API |
+| **Serverless** | Azure Functions v4 |
+| **Mensajería** | Azure Service Bus |
+| **Persistencia** | Entity Framework Core & SQLite |
+| **Testing** | MSTest & NSubstitute |
+
+---
+
+## **⚙️ Instalación y Configuración**
+
+### **Requisitos Previos**
+* [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+* [Azure Functions Core Tools](https://github.com/Azure/azure-functions-core-tools)
+* VS Code o Visual Studio 2022
+
+### **Pasos para iniciar**
+
+1. **Clonar y restaurar:**
+   ```bash
    git clone https://github.com/luiscacuango2/BACKEND_CAMERA_REVIEW.git
-   cd BACKEND_CAMERA_REVIEW
    ```
 
 2. Restaura las dependencias:
@@ -39,35 +51,35 @@ El sistema está diseñado con una arquitectura de microservicios:
    ```
    dotnet build
    ```
+4. Ejecutar Pruebas de Calidad:
+   ```
+   dotnet test
+   ```
 
-## Uso
+## Ejecución de Módulos
 
-### Ejecutar el Servicio de Autenticación
+### Servicio de Autenticación
 
-```
-cd AuthenticationService
-dotnet run
-```
+   ```
+   cd AuthenticationService
+   dotnet run
+   ```
 
-Accede a Swagger en `http://localhost:5000/swagger`.
+Accede a la documentación interactiva en: `http://localhost:5000/swagger`.
 
-### Ejecutar Pruebas
+### Azure Functions (Publicador)
 
-```
-dotnet test
-```
+   ```
+   cd ReviewPublisherFunctionApp
+   func host start
+   ```
 
-### Ejecutar la Función de Azure
 
-Instala Azure Functions Core Tools y ejecuta:
-```
-cd ReviewPublisherFunctionApp
-func host start
-```
+### **Contribución y Calidad**
 
-## Contribución
+¡Las contribuciones son lo que hacen a la comunidad increíble!
 
-Si deseas contribuir, por favor abre un issue o envía un pull request.
+Revisa nuestra **Guía de Contribución** en [CONTRIBUTING.md](CONTRIBUTING.md) para conocer los detalles sobre nuestro código de conducta y el proceso para enviarnos pull requests.
 
 ## Licencia
 

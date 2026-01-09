@@ -46,12 +46,12 @@ Si encuentras un error, abre un **Issue** incluyendo:
   dotnet format
   ```
 ### **Mensajes de Commit (Conventional Commits)**
-Usamos este estándar para mantener un historial limpio y profesional:
+Seguimos la convención de [Conventional Commits](https://www.conventionalcommits.org/):
 
-feat(camera): agregar integración con sensor de movimiento
-fix(api): corregir error de validación en el modelo CameraDTO
-docs: actualizar guía de instalación para VS Code
-test: añadir pruebas unitarias para el servicio de Review
+- `feat(camera):` para nuevas funcionalidades.
+- `fix(auth):` para corrección de errores.
+- `docs:` cambios en documentación.
+- `test:` adición o corrección de pruebas.
 
 ---
 

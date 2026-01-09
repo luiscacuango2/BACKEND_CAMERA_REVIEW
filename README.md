@@ -1,10 +1,15 @@
-# **BACKEND_CAMERA_REVIEW** 📸
+![.NET 8](https://img.shields.io/badge/.NET-8.0-512BD4?style=for-the-badge&logo=dotnet)
+![Azure Functions](https://img.shields.io/badge/Azure_Functions-0062AD?style=for-the-badge&logo=azure-functions&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=json-web-tokens)
+
+# **BACKEND_CAMERA_REVIEW**
 
 Este sistema es un ecosistema de microservicios robusto desarrollado en **.NET 8** enfocado en la gestión, publicación y consumo de reseñas técnicas de cámaras fotográficas. Utiliza una arquitectura orientada a eventos para desacoplar la publicación de contenidos.
 
 ---
 
-## **🏗️ Arquitectura del Sistema**
+## **Arquitectura del Sistema**
 
 El proyecto se divide en componentes especializados para garantizar escalabilidad:
 
@@ -15,7 +20,7 @@ El proyecto se divide en componentes especializados para garantizar escalabilida
 
 ---
 
-## **🛠️ Stack Tecnológico**
+## **Stack Tecnológico**
 
 | Capa | Tecnología |
 | :--- | :--- |
@@ -28,12 +33,12 @@ El proyecto se divide en componentes especializados para garantizar escalabilida
 
 ---
 
-## **⚙️ Instalación y Configuración**
+## **Instalación y Configuración**
 
 ### **Requisitos Previos**
 * [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
 * [Azure Functions Core Tools](https://github.com/Azure/azure-functions-core-tools)
-* VS Code o Visual Studio 2022
+* VS Code o Visual Studio 1.107.1
 
 ### **Pasos para iniciar**
 
